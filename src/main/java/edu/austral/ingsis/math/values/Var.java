@@ -22,6 +22,6 @@ public class Var implements Value{
 
     @Override
     public String toString() {
-        return String.valueOf(value);
+        return name;
     }
 }
