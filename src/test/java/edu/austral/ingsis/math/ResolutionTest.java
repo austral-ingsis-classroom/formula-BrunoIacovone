@@ -1,11 +1,11 @@
 package edu.austral.ingsis.math;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import edu.austral.ingsis.math.operators.*;
 import edu.austral.ingsis.math.values.Val;
 import org.junit.jupiter.api.Test;
-
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ResolutionTest {
 

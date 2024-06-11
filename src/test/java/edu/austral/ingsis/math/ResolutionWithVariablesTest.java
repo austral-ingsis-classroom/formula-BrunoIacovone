@@ -1,12 +1,12 @@
 package edu.austral.ingsis.math;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import edu.austral.ingsis.math.operators.*;
 import edu.austral.ingsis.math.values.Val;
 import edu.austral.ingsis.math.values.Var;
 import org.junit.jupiter.api.Test;
-
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ResolutionWithVariablesTest {
 
@@ -29,7 +29,8 @@ public class ResolutionWithVariablesTest {
   /** Case (9 / x) * y where x = 3 and y = 4 */
   @Test
   public void shouldResolveFunction3() {
-    final Function function = new Multiplication(new Division(new Val(9), new Var("x", 3)), new Var("y", 4));
+    final Function function =
+        new Multiplication(new Division(new Val(9), new Var("x", 3)), new Var("y", 4));
     final Double result = function.evaluate();
     assertThat(result, equalTo(12d));
   }
@@ -37,7 +38,8 @@ public class ResolutionWithVariablesTest {
   /** Case (27 / a) ^ b where a = 9 and b = 3 */
   @Test
   public void shouldResolveFunction4() {
-    final Function function = new Power(new Division(new Val(27), new Var("a", 9)), new Var("b", 3));
+    final Function function =
+        new Power(new Division(new Val(27), new Var("a", 9)), new Var("b", 3));
     final Double result = function.evaluate();
     assertThat(result, equalTo(27d));
   }
@@ -69,7 +71,8 @@ public class ResolutionWithVariablesTest {
   /** Case (5 - i) * 8 where i = 2 */
   @Test
   public void shouldResolveFunction8() {
-    final Function function = new Multiplication(new Substract(new Val(5), new Var("i", 2)), new Val(8));
+    final Function function =
+        new Multiplication(new Substract(new Val(5), new Var("i", 2)), new Val(8));
     final Double result = function.evaluate();
     assertThat(result, equalTo(24d));
   }

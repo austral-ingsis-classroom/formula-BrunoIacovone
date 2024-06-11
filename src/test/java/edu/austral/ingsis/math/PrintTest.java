@@ -1,12 +1,12 @@
 package edu.austral.ingsis.math;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import edu.austral.ingsis.math.operators.*;
 import edu.austral.ingsis.math.values.Val;
 import edu.austral.ingsis.math.values.Var;
 import org.junit.jupiter.api.Test;
-
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class PrintTest {
 
@@ -68,7 +68,8 @@ public class PrintTest {
   @Test
   public void shouldPrintFunction8() {
     final String expected = "(5 - i) * 8";
-    final Function function = new Multiplication(new Substract(new Val(5), new Var("i", 1)), new Val(8));
+    final Function function =
+        new Multiplication(new Substract(new Val(5), new Var("i", 1)), new Val(8));
     final String result = function.toString();
     assertThat(result, equalTo(expected));
   }
