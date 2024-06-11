@@ -2,7 +2,6 @@ package edu.austral.ingsis.math;
 
 import edu.austral.ingsis.math.operators.*;
 import edu.austral.ingsis.math.values.Val;
-import edu.austral.ingsis.math.values.Var;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
